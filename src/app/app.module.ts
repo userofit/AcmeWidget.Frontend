@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { FormHelperService } from './services/form-helper.service';
-import { UserListComponent } from './user-list/user-list/user-list.component';
+import { UserListComponent } from './user-list/user-list.component';
 import { UserSignupService } from './services/user-signup.service';
 import { HttpClientModule } from '@angular/common/http';
 
