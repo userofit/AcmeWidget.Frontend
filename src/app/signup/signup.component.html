@@ -1,0 +1,48 @@
+<div class="container">
+    <h4>Sign up to Acme</h4>
+    <form novalidate [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="fname">First Name <strong>*</strong></label>
+            <input type="text" class="form-control" id="fname" formControlName="fname" aria-required="true" required>
+            <ng-container *ngIf="formHelperService.hasError('fname')">
+                <p *ngFor="let error of formHelperService.getErrors('fname')" class="form-error help-block" role="alert">
+                    {{ formHelperService.getErrorMessage('fname', error) }}
+                </p>
+            </ng-container>
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name <strong>*</strong></label>
+            <input type="text" class="form-control" id="lname" formControlName="lname" aria-required="true" required>
+            <ng-container *ngIf="formHelperService.hasError('lname')">
+                <p *ngFor="let error of formHelperService.getErrors('lname')" class="form-error help-block" role="alert">
+                    {{ formHelperService.getErrorMessage('lname', error) }}
+                </p>
+            </ng-container>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Address <strong>*</strong></label>
+             <input type="text" class="form-control" id="email" formControlName="email" aria-required="true" required>
+             <ng-container *ngIf="formHelperService.hasError('email')">
+                <p *ngFor="let error of formHelperService.getErrors('email')" class="form-error help-block" role="alert">
+                    {{ formHelperService.getErrorMessage('email', error) }}
+                </p>
+            </ng-container>
+        </div>
+        <div class="form-group">
+            <label for="activity">Activity <strong>*</strong></label>
+             <input type="text" class="form-control" id="activity" formControlName="activity" aria-required="true" required>
+             <ng-container *ngIf="formHelperService.hasError('activity')">
+                <p *ngFor="let error of formHelperService.getErrors('activity')" class="form-error help-block" role="alert">
+                    {{ formHelperService.getErrorMessage('activity', error) }}
+                </p>
+            </ng-container>
+        </div>
+        <div class="form-group">
+            <label for="comments">Comments</label>
+             <textarea type="text" class="form-control" id="comments" formControlName="comments"></textarea>
+        </div>
+        <button class="button float-right" type="submit">Sign up</button>
+    </form>
+</div>
+    
+    
